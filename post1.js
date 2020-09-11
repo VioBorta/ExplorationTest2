@@ -6,6 +6,7 @@ const post1 = document.getElementById("post1");
 const post2 = document.getElementById("post2");
 const post3 = document.getElementById("post3");
 const post4 = document.getElementById("post4");
+const landingPage = document.getElementById("landingPage");
 
 logout.addEventListener("click", (e) => {
   e.preventDefault();
@@ -60,4 +61,8 @@ post4.addEventListener("click", (e) => {
   e.preventDefault();
 
     window.location.href = "post4.html";
+})
+landingPage.addEventListener("click", (e) => {
+  e.preventDefault();
+    window.location.href = "index.html";
 })

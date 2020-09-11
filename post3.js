@@ -6,6 +6,7 @@ const post3Img = document.getElementById("post3Img");
 const loginId = document.getElementById("loginId");
 const userID = document.getElementById("userID");
 const logout = document.getElementById("logout");
+const landingPage = document.getElementById("landingPage");
 
 logout.addEventListener("click", (e) => {
   e.preventDefault();
@@ -59,3 +60,7 @@ post4.addEventListener("click", (e) => {
   e.preventDefault();
   window.location.href = "post4.html";
 });
+landingPage.addEventListener("click", (e) => {
+  e.preventDefault();
+    window.location.href = "index.html";
+})
