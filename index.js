@@ -58,3 +58,8 @@ landingPage.addEventListener("click", (e) => {
   e.preventDefault();
     window.location.href = "index.html";
 })
+logout.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.clear();
+  window.location.reload();
+});
