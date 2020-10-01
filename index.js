@@ -11,16 +11,20 @@ const post4 = document.getElementById("post4");
 
 window.addEventListener("load", (e) => {
   e.preventDefault();
-if (!window.localStorage.getItem("user")){
-  loginId.style.display = "block";
-  avatarID.style.display = "none";
-  userLogged.style.display = "none";
-  window.location.href = "index .html";
-}else {
-  loginId.style.display = "none";
+if (window.localStorage.getItem("user")){
   avatarID.style.display = "block";
-  userLogged.style.display = "block";
-  window.location.href = "index.html";
+  loginId.style.display = "none";
+  userID.style.display = "block";
+  loginId.style.opacity = 0;
+  logout.style.display = "block";
+
+}else {
+  logout.style.opacity = 0;
+  userID.style.opacity = 0;
+  avatarID.style.display = "none";
+  loginId.style.display = "block";
+  userID.style.display = "none";
+  logout.style.display = "none";
 }
 });
 
