@@ -16,7 +16,9 @@ logout.addEventListener("click", (e) => {
 
 window.addEventListener("load", (e) => {
   e.preventDefault();
-  if (window.localStorage.getItem("user")) {
+  var cookieJs = document.cookie;
+
+  if (cookieJs) {
     post4Img.style.display = "block";
     avatarID.style.display = "block";
     loginId.style.display = "none";

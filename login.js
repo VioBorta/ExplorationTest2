@@ -17,14 +17,7 @@ loginButton.addEventListener("click", (e) => {
   const password = loginForm.password.value;
 
   if (username === "user" && password === "pass") {
-    window.localStorage.setItem(
-      "user",
-      JSON.stringify(loginForm.username.value)
-    );
-    window.localStorage.setItem(
-      "pass",
-      JSON.stringify(loginForm.password.value)
-    );
+    document.cookie="username=user; password=pass";
     window.location.href = "index.html";
   } else {
     loginErrorMsg.style.opacity = 1;

@@ -1,4 +1,3 @@
-
 const loginId = document.getElementById("loginId");
 const userID = document.getElementById("userID");
 const logout = document.getElementById("logout");
@@ -11,21 +10,22 @@ const post4 = document.getElementById("post4");
 
 window.addEventListener("load", (e) => {
   e.preventDefault();
-if (window.localStorage.getItem("user")){
-  avatarID.style.display = "block";
-  loginId.style.display = "none";
-  userID.style.display = "block";
-  loginId.style.opacity = 0;
-  logout.style.display = "block";
+  var cookieJs = document.cookie;
 
-}else {
-  logout.style.opacity = 0;
-  userID.style.opacity = 0;
-  avatarID.style.display = "none";
-  loginId.style.display = "block";
-  userID.style.display = "none";
-  logout.style.display = "none";
-}
+  if (cookieJs) {
+    avatarID.style.display = "block";
+    loginId.style.display = "none";
+    userID.style.display = "block";
+    loginId.style.opacity = 0;
+    logout.style.display = "block";
+  } else {
+    logout.style.opacity = 0;
+    userID.style.opacity = 0;
+    avatarID.style.display = "none";
+    loginId.style.display = "block";
+    userID.style.display = "none";
+    logout.style.display = "none";
+  }
 });
 
 loginId.addEventListener("click", (e) => {
@@ -37,29 +37,31 @@ loginId.addEventListener("click", (e) => {
 post1.addEventListener("click", (e) => {
   e.preventDefault();
 
-    window.location.href = "post1.html";
-})
+  window.location.href = "post1.html";
+});
 post2.addEventListener("click", (e) => {
   e.preventDefault();
 
-    window.location.href = "post2.html";
-})
+  window.location.href = "post2.html";
+});
 post3.addEventListener("click", (e) => {
   e.preventDefault();
 
-    window.location.href = "post3.html";
-})
+  window.location.href = "post3.html";
+});
 post4.addEventListener("click", (e) => {
   e.preventDefault();
 
-    window.location.href = "post4.html";
-})
+  window.location.href = "post4.html";
+});
 landingPage.addEventListener("click", (e) => {
   e.preventDefault();
-    window.location.href = "index.html";
-})
+  window.location.href = "index.html";
+});
+
 logout.addEventListener("click", (e) => {
   e.preventDefault();
-  localStorage.clear();
+  var cookieJs = document.cookie;
   window.location.reload();
+  document.cookie = cookieJs + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 });
